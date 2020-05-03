@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Neoplastizismus</title>
+</head>
+<body class="page">
+  <h2 class="subtitle">art term</h1>
+  <h1 class="title">neoplasticism</h1>
+  <p class="description">a style of abstract painting developed by Piet Mondrian, using only vertical and horizontal lines and rectangular shapes in black, white, grey, and primary colours.</p>
+    <div class="artwork">
+        <img class="original" src="images/Original.png" id="original">
+        <ul class="grid-container">
+            <li class="grid__item grid__item_color_white">
+                <div class="grid__item grid__item_place_top-left"></div>
+            </li>
+            <li class="grid__item grid__item_color_white">
+              <div class="grid__item_place_top-mid"></div>
+            </li>
+            <li class="grid__item grid__item_color_yellow">
+              <div class="grid__item_place_top-right"></div>
+            </li>
+            <li class="grid__item grid__item_color_white"></li>
+            <li class="grid__item grid__item_color_white">
+              <div class="grid__item grid__item_place_mid-top"></div>
+            </li>
+            <li class="grid__item grid__item_color_red"></li>
+            <li class="grid__item grid__item_color_yellow"></li>
+            <li class="grid__item grid__item_color_white">
+              <div class="grid__item grid__item_place_mid-mid"></div>
+              <div class="grid__item grid__item_place_mid-bot"></div>
+            </li>
+            <li class="grid__item grid__item_color_white"></li>
+            <li class="grid__item grid__item_color_white"></li>
+            <li class="grid__item grid__item_color_black"></li>
+            <li class="grid__item grid__item_color_white"></li>
+            <li class="grid__item grid__item_color_white"></li>
+            <li class="grid__item grid__item_color_yellow">
+ 
+            </li>
+            <li class="grid__item grid__item_color_white"></li>
+            <li class="grid__item grid__item_color_darkblue"></li>
+            <li class="grid__item grid__item_color_red"></li>
+            <li class="grid__item grid__item_color_white">
+              <div class="grid__item grid__item_place_bot-left"></div>
+              <div class="grid__item grid__item_place_bot-mid"></div>
+            </li>
+            <li class="grid__item grid__item_color_black"></li>
+            <li class="grid__item grid__item_color_white">
+              <div class="grid__item grid__item_place_bot-right"></div>
+            </li>
+        </ul>
+        <p class="artwork__caption">
+          <p class="title">Composition en rouge, jaune, bleu et noir</p>
+          <p class="subtitle">Piet Mondrian, 1921</p>
+        </p>
+    </div>
+    <button class="button" onclick="myFunction()">Сравнить</button>
+    <script>
+        function myFunction() {
+        let x = document.getElementById('original');
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }</script>
+</body>
+</html>
