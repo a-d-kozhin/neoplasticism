@@ -52,12 +52,44 @@
               <div class="grid__item grid__item_place_bot-right"></div>
             </li>
         </ul>
-        <p class="artwork__caption">
-          <p class="title">Composition en rouge, jaune, bleu et noir</p>
-          <p class="subtitle">Piet Mondrian, 1921</p>
-        </p>
     </div>
-    <button class="button" onclick="myFunction()">Сравнить</button>
+    <p class="caption">Composition with Red Blue and Yellow. Piet Mondrian, 1921</p>
+    <button class="button" onclick="myFunction()">click to compare</button>
+    <h2 class="subtitle">experiment</h1>
+      <h1 class="title">CSS grid and JS</h1>
+    <div class="artwork adaptive-artwork">
+      <ul class="grid-container adaptive-grid-container">
+          <li class="grid__item grid__item_color_white main-color"></li>
+          <li class="grid__item grid__item_color_white main-color"></li>
+          <li class="grid__item grid__item_color_yellow secondary-color">
+          </li>
+          <li class="grid__item grid__item_color_white main-color"></li>
+          <li class="grid__item grid__item_color_white main-color">
+          </li>
+          <li class="grid__item grid__item_color_red tertiary-color"></li>
+          <li class="grid__item grid__item_color_yellow secondary-color"></li>
+          <li class="grid__item grid__item_color_white main-color">
+          </li>
+          <li class="grid__item grid__item_color_white main-color"></li>
+          <li class="grid__item grid__item_color_white main-color"></li>
+          <li class="grid__item grid__item_color_black quaternary-color"></li>
+          <li class="grid__item grid__item_color_white main-color"></li>
+          <li class="grid__item grid__item_color_white main-color"></li>
+          <li class="grid__item grid__item_color_yellow secondary-color">
+
+          </li>
+          <li class="grid__item grid__item_color_white main-color"></li>
+          <li class="grid__item grid__item_color_darkblue quaternary-color"></li>
+          <li class="grid__item grid__item_color_red tertiary-color"></li>
+          <li class="grid__item grid__item_color_white main-color">
+          </li>
+          <li class="grid__item grid__item_color_black quaternary-color"></li>
+          <li class="grid__item grid__item_color_white main-color">
+          </li>
+      </ul>
+  </div>
+  <p class="caption responsive-caption">Neoplastic Art with CSS Grid, Alexander Kozhin, 2020</p>
+  <button class="button adaptive-button" onclick="random_bg_color()">click to generate something new</button>
     <script>
         function myFunction() {
         let x = document.getElementById('original');
@@ -67,5 +99,54 @@
           x.style.display = "none";
         }
       }</script>
+      
+      <script>
+        function random_bg_color() {
+            let x = Math.floor(Math.random() * 256);
+            let y = Math.floor(Math.random() * 256);
+            let z = Math.floor(Math.random() * 256);
+            let a = Math.floor(Math.random() * 256);
+            let s = Math.floor(Math.random() * 256);
+            let d = Math.floor(Math.random() * 256);
+            let q = Math.floor(Math.random() * 256);
+            let w = Math.floor(Math.random() * 256);
+            let e = Math.floor(Math.random() * 256);
+            let l = Math.floor(Math.random() * 256);
+            let k = Math.floor(Math.random() * 256);
+            let m = Math.floor(Math.random() * 256);
+            let main = "rgb(" + x + "," + y + "," + z + ")";
+            let secondary = "rgb(" + a + "," + s + "," + d + ")";
+            let tertiary = "rgb(" + q + "," + w + "," + e + ")";
+            let quaternary = "rgb(" + l + "," + k + "," + m + ")";
+            console.log(main);
+            console.log(secondary);
+            console.log(tertiary);
+            console.log(quaternary);
+            // document.getElementById("#main-color").style.background = bgColor;
+
+
+            let mainColors = document.getElementsByClassName("main-color");
+            for (var i = 0, max = mainColors.length; i < max; i++) {
+            mainColors[i].style.background = main;
+            }
+
+            let secondaryColors = document.getElementsByClassName("secondary-color");
+            for (var i = 0, max = secondaryColors.length; i < max; i++) {
+            secondaryColors[i].style.background = secondary;
+            }
+          
+            let tertiaryColors = document.getElementsByClassName("tertiary-color");
+            for (var i = 0, max = tertiaryColors.length; i < max; i++) {
+              tertiaryColors[i].style.background = tertiary;
+            }
+
+            let quaternaryColors = document.getElementsByClassName("quaternary-color");
+            for (var i = 0, max = quaternaryColors.length; i < max; i++) {
+              quaternaryColors[i].style.background = quaternary;
+            }
+
+            }
+        random_bg_color();
+      </script>
 </body>
 </html>
